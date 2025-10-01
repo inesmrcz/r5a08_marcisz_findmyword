@@ -8,6 +8,13 @@ public class Word {
         this.word = word;
     }
     public Score guess(String attempt) {
-        return new Score(this.word, attempt);
+        Score score = new Score(word);
+
+        /* Calcule le score pour la lettre d'indice 0
+           de la tentative
+         */
+        score.assess(0, attempt);
+
+        return score;
     }
 }
