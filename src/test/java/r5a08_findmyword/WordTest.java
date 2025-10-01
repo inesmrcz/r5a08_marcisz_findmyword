@@ -20,8 +20,17 @@ public class WordTest {
 
     }
 
-    
+    @Test
+    public void should_check_one_correct_letter(){
+        // Arrange
+        Word word = new Word ("I"); // Le mot à deviner fait une lettre
 
+        // Act
+        Score score = word.guess("I"); // tentative du joueur
+
+        // Assert
+        assertEquals(Letter.CORRECT, score.letter(0));
+    }
 
 
 }

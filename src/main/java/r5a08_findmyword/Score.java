@@ -1,9 +1,22 @@
 package r5a08_findmyword;
 
 public class Score {
-    public Letter letter(int index) {
 
-        return Letter.INCORRECT;
+    private String word;
+    private String attempt;
+
+    public Score(String word, String attempt) {
+        this.word = word;
+        this.attempt = attempt;
+    }
+
+    public Letter letter(int index) {
+        if (attempt.charAt(index) == word.charAt(index)) {
+            return Letter.CORRECT;
+        } else {
+            return Letter.INCORRECT;
+        }
 
     }
 }
+
