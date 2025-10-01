@@ -14,13 +14,13 @@ public class WordTest {
 
         // Act
         Score score = word.guess("B"); // tentative du joueur
-        Letter result = score.letter(0);
 
         // Assert
         assertEquals(Letter.INCORRECT, score.letter(0));
 
-
     }
+
+    
 
 
 

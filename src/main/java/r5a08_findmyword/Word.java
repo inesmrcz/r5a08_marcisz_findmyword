@@ -2,9 +2,12 @@ package r5a08_findmyword;
 
 public class Word {
 
-    private String Word;
+    private String word;
 
-    public Word(String word)
-    public void guess(String b) {
+    public Word(String word){
+        this.word = word;
+    }
+    public Score guess(String attempt) {
+        return new Score();
     }
 }
