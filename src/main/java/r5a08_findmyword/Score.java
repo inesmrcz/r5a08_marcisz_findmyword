@@ -10,6 +10,8 @@ public class Score {
         this.attempt = attempt;
     }
 
+
+
     public Letter letter(int index) {
         if (attempt.charAt(index) == word.charAt(index)) {
             return Letter.CORRECT;
@@ -18,5 +20,8 @@ public class Score {
         }
 
     }
+    public void assess(int index, String attempt) {
+
+        Letter result = letter(index);}
 }
 

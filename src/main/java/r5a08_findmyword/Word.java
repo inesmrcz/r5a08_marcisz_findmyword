@@ -8,7 +8,7 @@ public class Word {
         this.word = word;
     }
     public Score guess(String attempt) {
-        Score score = new Score(word);
+        Score score = new Score(word, attempt);
 
         /* Calcule le score pour la lettre d'indice 0
            de la tentative
