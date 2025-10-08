@@ -2,26 +2,21 @@ package r5a08_findmyword;
 
 public class Score {
 
-    private String word;
-    private String attempt;
+    private final String correct;
+    private Letter result = Letter.INCORRECT;
 
-    public Score(String word, String attempt) {
-        this.word = word;
-        this.attempt = attempt;
+    public Score(String correct) {
+        this.correct=correct;
     }
 
+    public Letter letter(int i) {
+        return result;
+    }
 
-
-    public Letter letter(int index) {
-        if (attempt.charAt(index) == word.charAt(index)) {
-            return Letter.CORRECT;
-        } else {
-            return Letter.INCORRECT;
+    public void assess(int position, String attempt) {
+        if (this.correct.charAt(position)==attempt.charAt(position)){
+            result = Letter.CORRECT;
         }
-
     }
-    public void assess(int index, String attempt) {
-
-        Letter result = letter(index);}
 }
 
